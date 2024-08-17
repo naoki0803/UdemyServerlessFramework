@@ -1,7 +1,3 @@
-// const serverless = require("serverless-http");
-// const express = require("express");
-// const app = express();
-
 const { IncomingWebhook } = require('@slack/webhook');
 const  AWS = require("aws-sdk");
 const dayjs = require('dayjs')

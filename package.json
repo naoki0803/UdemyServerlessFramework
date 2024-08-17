@@ -9,9 +9,7 @@
   "dependencies": {
     "@slack/webhook": "^7.0.2",
     "aws-sdk": "^2.1677.0",
-    "dayjs": "^1.11.12",
-    "express": "^4.19.2",
-    "serverless-http": "^3.2.0"
+    "dayjs": "^1.11.12"
   },
   "devDependencies": {
     "serverless-offline": "^14.0.0"
