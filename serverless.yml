@@ -24,7 +24,7 @@ functions:
     #             path: "/{any}"
     #             cors: true
     costNotif:
-        handler: ./src/costNotif.costNotif
+        handler: src/costNotif.handler
         events:
         # 日本時間で毎朝9時
             - schedule: cron(0 0 * * ? *)
@@ -35,9 +35,15 @@ functions:
         environment:
             SLACK_WEBHOOK_URL: ${ssm:UDEMY_AWS_LAMBDA_SLACK_WEBHOOK_URL}
             TZ: Asia/Tokyo
+        iamRolesStatements:
+            - Effect: Allow
+              Action:
+                - ce:GetCostAndUsage
+              Resource: "*"
 
 plugins:
     - serverless-offline
+    - serverless-iam-roles-per-function
 
 custom:
     serverless-offline:

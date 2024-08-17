@@ -23,11 +23,11 @@ const params = {
 // Lambdaハンドラー関数
 async function costNotif() {
     const costAndUsage = await ce.getCostAndUsage(params).promise();
-    const useCost = costAndUsage.ResultsVyTime[0].Total.UnblendedCost.Amount;
+    const useCost = costAndUsage.ResultsByTime[0].Total.UnblendedCost.Amount;
     await webhook.send({
         text: `今月の使用料は: ${useCost} USDです`
     });
 }
 
 // 関数をエクスポート
-module.exports = costNotif;
+module.exports.handler = costNotif;

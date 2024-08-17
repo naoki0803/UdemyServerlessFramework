@@ -12,6 +12,7 @@
     "dayjs": "^1.11.12"
   },
   "devDependencies": {
+    "serverless-iam-roles-per-function": "^3.2.0",
     "serverless-offline": "^14.0.0"
   }
 }
