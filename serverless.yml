@@ -1,3 +1,17 @@
+#
+# Serverless Framework Configuration File
+# 
+# このファイルは、Serverless Frameworkを使用してAWS上でサーバーレスアプリケーションをデプロイするための設定を行います。
+# 設定には、プロジェクト名、使用するAWSサービス、環境変数、IAMロールの権限設定などが含まれています。
+#
+# 詳細な説明:
+# - org: サービスを使用するためのServerless Frameworkの組織IDです。
+# - service: このプロジェクトの名前で、AWSリソース名にも使用されます。
+# - provider: AWSプロバイダーの設定。ランタイムやリージョンを指定します。
+# - plugins: 使用するServerless Frameworkプラグインのリスト。
+# - functions: Lambda関数の定義とイベントトリガーの設定。
+# - custom: サーバーレスプラグインに対するカスタム設定。
+
 # "org" ensures this Service is used with the correct Serverless Framework Access Key.
 org: 00083ns
 # "service" is the name of this project. This will also be added to your AWS resource names.

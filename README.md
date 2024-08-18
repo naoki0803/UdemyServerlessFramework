@@ -1,3 +1,22 @@
+# AWS Lambda / Serverless Framework 速習ハンズオン
+https://ibmcsr.udemy.com/course/aws-lambda-serverless-framework/
+
+## 概要
+WS Lambda / Serverless Framework 速習ハンズオンを受講して、
+ハンズオンで作成した、AWSの利用料をSlack通知する機能
+※講座内の後半で実装する｢Webアプリケーションの実装｣は未実施
+
+## 留意点
+### momentsの利用について
+講座ないではnpm momentsを利用しているが、非推奨な為、dayjsを利用して実装
+※採用理由は、momentsと同じ様な実装ができる点と、Web検索しmomentsの代替として利用されている実績を確認した為
+
+### 関数名について
+講座内では関数を直接`export async function handler(){}` として記述しているが、
+本Projectでは`module.exports.handler = costNotif;`として記述している。
+これまでに勉強してきた内容で、実装できるか確認したかった為。
+
+## 以下Serverless Frameworkを導入した際に、自動で記述されたReadmeの内容
 <!--
 title: 'Serverless Framework Node Express API on AWS'
 description: 'This template demonstrates how to develop and deploy a simple Node Express API running on AWS Lambda using the Serverless Framework.'
